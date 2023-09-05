@@ -10,7 +10,7 @@ SIMULATOR:
     HEIGHT: 0.88
     RADIUS: 0.18
   HABITAT_SIM_V0:
-    GPU_DEVICE_ID: 0
+    GPU_DEVICE_ID: 1
     ALLOW_SLIDING: False
   SEMANTIC_SENSOR:
     WIDTH: 640
@@ -45,6 +45,6 @@ TASK:
 
 DATASET:
   TYPE: ObjectNav-v1
-  SPLIT: train
+  SPLIT: val
   DATA_PATH: "habitat-challenge-data/objectgoal_hm3d/{split}/{split}.json.gz"
   SCENES_DIR: "habitat-challenge-data/data/scene_datasets/"

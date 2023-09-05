@@ -14,7 +14,7 @@ def main():
 
     args_2 = get_args()
     args_2.sem_gpu_id = 0
-    config_paths = os.environ["CHALLENGE_CONFIG_FILE"]
+    config_paths = "/PEANUT/configs/challenge_objectnav2022.local.rgbd.yaml"
     config = habitat.get_config(config_paths)
     nav_agent = PEANUT_Agent(args=args_2,task_config=config)
     if args_2.evaluation == "local":

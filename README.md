@@ -1,14 +1,3 @@
-# PEANUT: Predicting and Navigating to Unseen Targets
-
-[Albert J. Zhai](https://ajzhai.github.io/), [Shenlong Wang](https://shenlong.web.illinois.edu/)<br/>
-University of Illinois at Urbana-Champaign
-
-ICCV 2023
-
-[Paper](https://arxiv.org/abs/2212.02497) │ [Project Page](https://ajzhai.github.io/peanut/)
-
-![Example Video](docs/example_vid.gif)
-
 ## Requirements
  As required by the [Habitat Challenge](https://github.com/facebookresearch/habitat-challenge), our code uses Docker to run. Install nvidia-docker by following the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#docker) (only Linux is supported). There is no need to manually install any other dependencies. However, you do need to download and place several files, as follows:
 
@@ -62,19 +51,3 @@ We use MMSegmentation to train and run PEANUT's prediction model. A custom clone
 The original map dataset used in the paper can be downloaded from [this Google Drive link](https://drive.google.com/file/d/134omZAAu_zYUaOYuNQcDMPhZCdxV0zbZ/view?usp=sharing). 
 
 It contains sequences of semantic maps from 5000 episodes (4000 train, 1000 val) of [Stubborn](https://github.com/Improbable-AI/Stubborn)-based exploration  in HM3D. This dataset can be directly used to train a target prediction model using `prediction/train_prediction_model.py`.
-
-
-## Citation
-
-Please cite our paper if you find this repo useful!
-```bibtex
-@inproceedings{zhai2023peanut,
-  title={{PEANUT}: Predicting and Navigating to Unseen Targets},
-  author={Zhai, Albert J and Wang, Shenlong},
-  booktitle={ICCV},
-  year={2023}
-}
-```
-
-## Acknowledgments
-This project builds upon code from [Stubborn](https://github.com/Improbable-AI/Stubborn), [SemExp](https://github.com/devendrachaplot/Object-Goal-Navigation), and [MMSegmentation](https://github.com/open-mmlab/mmsegmentation). We thank the authors of these projects for their amazing work!

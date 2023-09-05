@@ -21,11 +21,7 @@ ADD prediction /prediction
 RUN /bin/bash -c ". activate habitat; cd prediction; pip install -e ."
 
 ARG INCUBATOR_VER=unknown
-ADD nav_exp.sh /nav_exp.sh
-ADD configs/challenge_objectnav2021.local.rgbd.yaml /challenge_objectnav2021.local.rgbd.yaml
-ADD configs/challenge_objectnav2021.remote.rgbd.yaml /challenge_objectnav2021.remote.rgbd.yaml
-ADD configs/challenge_objectnav2022.local.rgbd.yaml /challenge_objectnav2022.local.rgbd.yaml
-ADD configs/challenge_objectnav2022noisy.local.rgbd.yaml /challenge_objectnav2022noisy.local.rgbd.yaml
+
 ENV AGENT_EVALUATION_TYPE remote
 
 # Uncomment this line if submitting to leaderboard. Not needed for local experiments, and it makes the build take longer.
@@ -33,6 +29,6 @@ ENV AGENT_EVALUATION_TYPE remote
 
 ENV PYTHONPATH "${PYTHONPATH}:/nav"
 
-ENV TRACK_CONFIG_FILE "/challenge_objectnav2022.local.rgbd.yaml"
+ENV TRACK_CONFIG_FILE "configs/challenge_objectnav2022.local.rgbd.yaml"
 
-CMD ["/bin/bash", "-c", "source activate habitat && export PYTHONPATH=/evalai-remote-evaluation:$PYTHONPATH && export CHALLENGE_CONFIG_FILE=$TRACK_CONFIG_FILE && bash nav_exp.sh"]
+CMD ["/bin/bash", "-c", "source activate habitat && export PYTHONPATH=/evalai-remote-evaluation:$PYTHONPATH && export CHALLENGE_CONFIG_FILE=$TRACK_CONFIG_FILE && tail -f /dev/null"]
