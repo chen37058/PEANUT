@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+# PEANUT: Predicting and Navigating to Unseen Targets
+
+[Albert J. Zhai](https://ajzhai.github.io/), [Shenlong Wang](https://shenlong.web.illinois.edu/)<br/>
+University of Illinois at Urbana-Champaign
+
+ICCV 2023
+
+[Paper](https://arxiv.org/abs/2212.02497) │ [Project Page](https://ajzhai.github.io/PEANUT/)
+
+![Example Video](docs/example_vid.gif)
+
+>>>>>>> 5fe8358bece89645f7651e524234f967215fa4ac
 ## Requirements
  As required by the [Habitat Challenge](https://github.com/facebookresearch/habitat-challenge), our code uses Docker to run. Install nvidia-docker by following the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#docker) (only Linux is supported). There is no need to manually install any other dependencies. However, you do need to download and place several files, as follows:
 
